@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Thông Tin Tài Khoản</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+    
+      <th:block th:include="/_header"></th:block>
+      <center>
+      <div class="container-fluid">
+      <div class="page-title">Thông Tin Tài Khoản</div>
+      <div >
+         <ul>
+            <li>User Name: <span th:utext="${#request.userPrincipal.name}"></span></li>
+            <li>
+               Role: <span th:each="auth : ${userDetails.authorities}" th:utext="${auth.authority}"></span>
+               <!--<ul>
+                  <li th:each="auth : ${userDetails.authorities}" th:utext="${auth.authority}"></li>
+               </ul> -->
+            </li>
+         </ul>
+      </div>
+      </div>
+      </center>
+      <th:block th:include="/_footer"></th:block>
+       
+   </body>
+</html>

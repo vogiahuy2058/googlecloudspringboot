@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tin Tức-Sự Kiện</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<th:block th:include="/_header"></th:block>
+<div class="container-fluid">
+<center>
+    <h2>Tin tức & Sự kiện</h2>
+</center>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 hinhtintuc">
+            <div class="khungtintuc">
+                <h4>CÙNG HT BAKERY ĐÓN CHÀO “SNOWY XMAS”</h4>
+                Noel năm nay, hãy cùng HT khám phá khu rừng tuyết “Buche de Noel”,
+                bạn sẽ được chinh phục thị giác với chiếc bánh “Happy Noel” và “Hello Noel”
+                trong nụ cười yêu thương của ông già tuyết cưỡi tuần lộc mang niềm vui – hạnh phúc đến cho muôn nhà,
+                hay “Chiếc khúc cây biết nói: “Welcome sweet home” với hương vị chocolate ngọt ngào tan chảy ngay nơi đầu lưỡi,
+                hòa quyện cùng sự mềm mại trong từng miếng bánh bông lan sẽ lại chinh phục vị giác của tất cả thành viên gia đình
+                bằng sự ngọt ngào yêu thương.
+            </div>
+            <img th:src="@{/images/XMas.jpg}" class="img-responsive">
+        </div>
+        <div class="col-md-6 hinhtintuc">
+            <img th:src="@{/images/cup cup cup cake happy new year_Tiembanh Tiramisu.jpg}" class="img-responsive">
+            <div class="khungtintuc">
+                <h4>BỘ SẢN PHẨM QUÀ TẾT “BRODARD ĐA LỘC 2019”</h4>
+                Trong dịp tết 2019 để đón chào năm mới, HT BAKERY mang đến bộ sưu tập quà Tết “Brodard – Đa Lộc” mang ý nghĩa “Gửi trao lộc phúc – may mắn tràn đầy”, gói trọn “hương vị ngày tết”.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
