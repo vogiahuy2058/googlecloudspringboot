@@ -13,7 +13,7 @@ public class AccountDAO {
  
     @Autowired
     private SessionFactory sessionFactory;
- 
+
     public Account findAccount(String userName) {
         Session session = this.sessionFactory.getCurrentSession();
         return session.find(Account.class, userName);
